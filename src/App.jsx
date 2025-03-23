@@ -10,6 +10,8 @@ function App() {
       annualInvestment:1200,
       expectedReturn:6,
       duration:10});
+
+    const inputIsValid = userValues.duration >=1;
   
       function changeValue(inputIdentifier,newValue){
           setUserValues((oldValues)=>{
@@ -23,7 +25,7 @@ function App() {
     <>
     <Header></Header>
     <UserInput changeValue={changeValue} userValues={userValues}></UserInput>
-    <ResultList resultsValues={userValues}></ResultList>
+    {inputIsValid ? <ResultList resultsValues={userValues}></ResultList>:<p className="center">PLEASE ENTER A VALID DATA!!</p>}
     </>
   )
 }
