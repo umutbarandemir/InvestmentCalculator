@@ -3,10 +3,10 @@ import HeaderImage from "../assets/investment-calculator-logo.png"
 
 const Header = () => {
   return (
-    <div id='header'>
+    <header id='header'>
         <img src={HeaderImage} alt="No image" />
         <h1>Investment Calculator</h1>
-    </div>
+    </header>
   )
 }
 
